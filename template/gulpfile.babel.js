@@ -153,7 +153,6 @@ gulp.task('js:legacy', () => {
 gulp.task('js:deploy', () => {
   return gulp.src('./build/arquivos/*.js')
     .pipe($.stripComments())
-    .pipe($.uglify())
     .pipe(
       $.babel()
         .on('error', function onError (error) {
@@ -161,6 +160,7 @@ gulp.task('js:deploy', () => {
           this.emit('end')
         })
     )
+    .pipe($.uglify())
     .pipe($.header(bannerFiles))
     .pipe(gulp.dest('./deploy/js/'))
     .pipe($.connect.reload())
