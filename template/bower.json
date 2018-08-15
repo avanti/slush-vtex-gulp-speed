@@ -31,6 +31,6 @@
     "avanti-search": "^2.2.1",
     "js-cookie": "^2.2.0",
     "slick-carousel": "^1.8.1",
-    "sass-burger": "^1.3.1"
-  <% } %>}
+    "sass-burger": "^1.3.1"<% } %>
+  }
 }
