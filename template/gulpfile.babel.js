@@ -125,13 +125,11 @@ gulp.task('clean', () => {
 //   _/ |\__,_| \_/ \__,_|___/\___|_|  |_| .__/ \__|
 //  |__/                                 |_|
 
-gulp.task('js', ['js:main', 'js:legacy'])
+gulp.task('js', ['js:main', 'js:lint', 'js:legacy'])
 
 gulp.task('js:main', () => {
   return gulp.src(jsFiles)
     .pipe($.sourcemaps.init())
-    .pipe($.xo())
-    .pipe($.xo.format())
     .pipe(
       $.babel()
         .on('error', onError)
@@ -139,6 +137,12 @@ gulp.task('js:main', () => {
     .pipe($.concat(`${parseInt(version)}-${vtex.acronym}-${vtex.device}-application.js`))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('./build/arquivos/'))
+})
+
+gulp.task('js:lint', () => {
+  return gulp.src(jsFiles)
+    .pipe($.xo())
+    .pipe($.xo.format())
 })
 
 gulp.task('js:legacy', () => {
