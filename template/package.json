@@ -64,6 +64,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-xo": "^0.17.1",
     "gulp.spritesmith": "^6.9.0",
+    "husky": "^1.0.0-rc.13",
     "merge-stream": "^1.0.1",
     "proxy-middleware": "^0.15.0",
     "run-sequence": "^2.2.1",
