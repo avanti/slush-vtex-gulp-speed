@@ -1,6 +1,6 @@
 {
   "name": "slush-vtex-gulp-speed",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Slush VTEX Gulp Speed",
   "main": "index.js",
   "author": "Carlo Schneider <carlo.schneider@penseavanti.com.br>",
