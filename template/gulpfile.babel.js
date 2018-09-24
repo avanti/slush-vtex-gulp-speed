@@ -137,6 +137,7 @@ gulp.task('js:main', () => {
     .pipe($.concat(`${parseInt(version)}-${vtex.acronym}-${vtex.device}-application.js`))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('./build/arquivos/'))
+    .pipe($.connect.reload())
 })
 
 gulp.task('js:lint', () => {
