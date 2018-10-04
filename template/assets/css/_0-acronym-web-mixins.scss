@@ -37,7 +37,7 @@
   }
 }
 
-@mixin arrow($direction, $size, $color) {
+@mixin triangle($direction, $size, $color) {
   content: '';
 
   width: 0;
@@ -55,6 +55,37 @@
       border-#{$position}: $size solid transparent;
     }
   }
+}
+
+/**
+ * @direction: 'top', 'right', 'bottom', 'left'
+ * @size: 10px
+ * @color: #fff, $black
+ * @borderSize: 1px
+ */
+@mixin arrow($direction, $size, $color, $borderSize: 1px) {
+  $angle: null;
+
+  @if $direction == 'bottom' {
+    $angle: -45deg;
+  } @else if $direction == 'right' {
+    $angle: -135deg;
+  } @else if $direction == 'left' {
+    $angle: 45deg;
+  } @else if $direction == 'top' {
+    $angle: 135deg;
+  }
+
+  @include transform(translate(-50%, -50%) rotate($angle));
+
+  border-left: $borderSize solid $color;
+  border-bottom: $borderSize solid $color;
+  content: '';
+  height: $size;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: $size;
 }
 
 @mixin spriteImage($sprite, $image) {
