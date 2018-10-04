@@ -87,10 +87,3 @@
   top: 50%;
   width: $size;
 }
-
-@mixin spriteImage($sprite, $image) {
-  background-image: sprite-url($sprite);
-  background-position: nth(sprite-position($sprite, $image), 1) (nth(sprite-position($sprite, $image), 2));
-  height: sprite-sprite-height($image);
-  width: sprite-sprite-width($image);
-}
