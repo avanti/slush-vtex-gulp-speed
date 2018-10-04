@@ -4,6 +4,15 @@
   margin: 0;
 }
 
+@mixin resetButton {
+  background-color: transparent;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
 @mixin optional-at-root($sel) {
   @at-root #{if(not &, $sel, selector-append(&, $sel))} {
     @content;
