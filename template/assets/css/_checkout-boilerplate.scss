@@ -8,7 +8,6 @@
 /**
  * Vendor
  */
-<%= (newStore ? '' : '/\/ ') %>@import '0-<%= storeAcronym %>-web-vendor-bootstrap';
 
 /**
  * Helpers
