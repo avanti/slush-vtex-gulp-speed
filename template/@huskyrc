@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "post-merge": "bower install"
+    "post-merge": "npx bower install"
   }
 }
