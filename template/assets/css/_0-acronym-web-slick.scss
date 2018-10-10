@@ -1,0 +1,26 @@
+.slick-slider {
+  .box-banner {
+    display : none;
+    overflow: hidden;
+
+    &:first-child {
+      display: block;
+    }
+
+    a {
+      display: block;
+    }
+      img {
+        @include translateX(-50%);
+
+        position: relative;
+        left: 50%;
+      }
+  }
+
+  &.slick-initialized {
+    .box-banner {
+      display: block !important;
+    }
+  }
+}
