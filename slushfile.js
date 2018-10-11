@@ -3,8 +3,12 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var inquirer = require('inquirer');
+var updateNotifier = require('update-notifier');
+var pkg = require('./package.json');
 
 gulp.task('default', function (done) {
+  updateNotifier({pkg: pkg}).notify();
+
   var questions = [
     {
       name: 'storeName',
@@ -28,6 +32,21 @@ gulp.task('default', function (done) {
         {
           value: false,
           name: 'Suporte (Legado, sem vendors)'
+        }
+      ]
+    },
+    {
+      type: 'list',
+      name: 'boostrapVersion',
+      message: 'Qual a versão do bootstrap?',
+      choices: [
+        {
+          value: 3,
+          name: 'Avanti Bootstrap 3'
+        },
+        {
+          value: 4,
+          name: 'Avanti Bootstrap 4'
         }
       ]
     }

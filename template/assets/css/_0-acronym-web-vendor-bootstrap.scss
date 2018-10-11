@@ -1,4 +1,4 @@
-// Core variables and mixins
+<% if (boostrapVersion === 3) { %>// Core variables and mixins
 @import '../vendor/avanti-bootstrap-sass/assets/stylesheets/bootstrap/variables';
 @import '../vendor/avanti-bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 
@@ -13,4 +13,8 @@
 @import '../vendor/avanti-bootstrap-sass/assets/stylesheets/bootstrap/utilities';
 @import '../vendor/avanti-bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities';
 
-@import '../vendor/avanti-bootstrap-sass/assets/stylesheets/bootstrap/navs';
+@import '../vendor/avanti-bootstrap-sass/assets/stylesheets/bootstrap/navs';<% } else { %>
+// avanti-bootstrap v4
+
+@import '../../node_modules/avanti-bootstrap/scss/bootstrap-reboot';
+@import '../../node_modules/avanti-bootstrap/scss/bootstrap-grid';<% } %>
