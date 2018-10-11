@@ -26,8 +26,8 @@
     "tests"
   ],
   "dependencies": {
-    "avanti-class": "^1.0.0"<% if (newStore) { %>,
-    "avanti-bootstrap-sass": "^3.3.7",
+    "avanti-class": "^1.0.0"<% if (newStore) { %>,<% if (boostrapVersion === 3) { %>
+    "avanti-bootstrap-sass": "^3.3.7",<% } %>
     "avanti-search": "^3.1.0",
     "js-cookie": "^2.2.0",
     "slick-carousel": "^1.8.1",
